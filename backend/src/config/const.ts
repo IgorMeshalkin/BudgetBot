@@ -1,2 +1,2 @@
 export const AMOUNT_NORMALIZER = 100;
-export const RATE_NORMALIZER = 1000000;
+export const RATE_NORMALIZER = 1000000000;

@@ -19,7 +19,7 @@ export class Currency extends BaseEntity {
   @Column({ type: ColumnType.VARCHAR, nullable: false })
   code: string;
 
-  @Column({ type: ColumnType.INTEGER, nullable: false })
+  @Column({ type: ColumnType.BIGINT, nullable: false })
   usdRate: number;
 
   @Column({ type: ColumnType.BOOLEAN, default: false })

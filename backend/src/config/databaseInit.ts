@@ -9,6 +9,8 @@ export enum BaseCurrencyCodes {
   DOLLAR = 'USD',
   EURO = 'EUR',
   RUBBLE = 'RUB',
+  DONG = 'VND',
+  USDT = 'USDT',
 }
 
 const baseCurrencies = [
@@ -26,6 +28,16 @@ const baseCurrencies = [
     name: 'ruble',
     code: BaseCurrencyCodes.RUBBLE,
     usdRate: 0.0124 * RATE_NORMALIZER,
+  },
+  {
+    name: 'dong',
+    code: BaseCurrencyCodes.DONG,
+    usdRate: 0.0000385 * RATE_NORMALIZER,
+  },
+  {
+    name: 'usdt',
+    code: BaseCurrencyCodes.USDT,
+    usdRate: RATE_NORMALIZER,
   },
 ];
 
@@ -83,7 +95,7 @@ export const databaseInit = async (dataSource: DataSource) => {
     for (const category of baseCategories) {
       await categoryRepository.save({
         name: category.name,
-        type: category.type
+        type: category.type,
       });
     }
   }
